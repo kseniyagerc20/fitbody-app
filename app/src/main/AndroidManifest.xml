@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="work.FitBody">
 
-
+<!--Подключение интернт-->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
