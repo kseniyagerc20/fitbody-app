@@ -93,12 +93,12 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
 		ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:19:27-74
-activity#work.FitBody.WatchMovieActivity
+activity#work.FitBody.FullInfoActivity
 ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:22:9-24:20
 	android:parentActivityName
-		ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:22:66-120
+		ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:22:64-118
 	android:name
-		ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:22:19-65
+		ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:22:19-63
 meta-data#android.support.PARENT_ACTIVITY
 ADDED from C:\Users\user\AndroidStudioProjects\FitBody\app\src\main\AndroidManifest.xml:23:13-125
 	android:value

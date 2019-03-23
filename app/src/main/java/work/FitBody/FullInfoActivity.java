@@ -11,21 +11,37 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.squareup.picasso.Picasso;
 
-public class WatchMovieActivity extends AppCompatActivity {
+public class FullInfoActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
+
+    public String urlPath; //Переменая для ссылки
+
+    YouTubePlayerView mYouTubePlayerView;
+    YouTubePlayer.OnInitializedListener mOnInitializedListener;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Задаем внешний вид интерфейса
         setContentView(R.layout.watch_movie);
+
+        YouTubePlayerSupportFragment frag =
+                (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtubePlay);
+        frag.initialize(YouTubeConfiguration.getApiKey(), this);
+
         //Добавляем размещение элементов
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         //Получаем нужные данные
         String name = intent.getStringExtra("name");
         String description = intent.getStringExtra("description");
@@ -58,16 +74,27 @@ public class WatchMovieActivity extends AppCompatActivity {
         numberOfViewsTextView.setText(numberOfViews + " просмотров");
         Picasso.get().load(image).into(imageView);
 
-        //Видеозапись
-        VideoView videoView = (VideoView) findViewById(R.id.videoView);
-        String uriPath = intent.getStringExtra("url");
-        Uri uri = Uri.parse(uriPath);
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
+        this.urlPath = intent.getStringExtra("url"); //Запись ссылки
 
-        //Добавление управления видеозаписью
-        MediaController mediaController = new MediaController(this);
-        videoView.setMediaController(mediaController);
+
+    }
+
+    //Метод для выдачи ссылки
+
+    public String getUrlPath() {
+        return urlPath;
+    }
+
+
+    //Успех
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+        youTubePlayer.loadVideo(getUrlPath()); //Загрузка видоса
+    }
+
+
+    //При неудаче
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
     }
 }

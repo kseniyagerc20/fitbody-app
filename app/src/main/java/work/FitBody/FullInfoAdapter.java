@@ -15,24 +15,24 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 //Класс для упрощения связывания данных с элементов управдения
-class MovieAdapter extends BaseAdapter {
+class FullInfoAdapter extends BaseAdapter {
     private Activity activity;
-    private ArrayList<Movie> movieArrayList;
+    private ArrayList<Workout> workoutArrayList;
     private LayoutInflater inflater;
 
-    MovieAdapter(Activity activity, ArrayList<Movie> movieArrayList) {
+    FullInfoAdapter(Activity activity, ArrayList<Workout> workoutArrayList) {
         this.activity = activity;
-        this.movieArrayList = movieArrayList;
+        this.workoutArrayList = workoutArrayList;
     }
 
     @Override
     public int getCount() {
-        return this.movieArrayList.size();
+        return this.workoutArrayList.size();
     }
 
     @Override
-    public Movie getItem(int position) {
-        return this.movieArrayList.get(position);
+    public Workout getItem(int position) {
+        return this.workoutArrayList.get(position);
     }
 
     @Override
@@ -56,32 +56,32 @@ class MovieAdapter extends BaseAdapter {
         TextView inventory = (TextView) convertView.findViewById(R.id.inventoryTextView);
         ImageView image = (ImageView) convertView.findViewById(R.id.imageView);
 
-        final Movie movie = getItem(position);
-        name.setText(movie.getName());
-        if (movie.getDescription().length() <= 150) {
-            description.setText(movie.getDescription());
+        final Workout workout = getItem(position);
+        name.setText(workout.getName());
+        if (workout.getDescription().length() <= 150) {
+            description.setText(workout.getDescription());
         } else {
-            description.setText(movie.getDescription().substring(0, 150) + "...");
+            description.setText(workout.getDescription().substring(0, 150) + "...");
         }
-        numberOfViews.setText(movie.getNumberOfViews() + " просмотров");
-        muscleGroup1.setText("Целевые мышцы: " + movie.getMuscleGroup1());
-        muscleGroup2.setText("Участвующие мышцы: " + movie.getMuscleGroup2());
-        inventory.setText("Инвентарь: " + movie.getInventory());
-        Picasso.get().load(movie.getImage()).into(image);
+        numberOfViews.setText(workout.getNumberOfViews() + " просмотров");
+        muscleGroup1.setText("Целевые мышцы: " + workout.getMuscleGroup1());
+        muscleGroup2.setText("Участвующие мышцы: " + workout.getMuscleGroup2());
+        inventory.setText("Инвентарь: " + workout.getInventory());
+        Picasso.get().load(workout.getImage()).into(image);
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity, WatchMovieActivity.class);
-                intent.putExtra("name", movie.getName());
-                intent.putExtra("description", movie.getDescription());
-                intent.putExtra("numberOfViews", movie.getNumberOfViews());
-                intent.putExtra("muscleGroup1", movie.getMuscleGroup1());
-                intent.putExtra("muscleGroup2", movie.getMuscleGroup2());
-                intent.putExtra("inventory", movie.getInventory());
-                intent.putExtra("technique", movie.getTechnique());
-                intent.putExtra("image", movie.getImage());
-                intent.putExtra("url", movie.getUrl());
+                Intent intent = new Intent(activity, FullInfoActivity.class);
+                intent.putExtra("name", workout.getName());
+                intent.putExtra("description", workout.getDescription());
+                intent.putExtra("numberOfViews", workout.getNumberOfViews());
+                intent.putExtra("muscleGroup1", workout.getMuscleGroup1());
+                intent.putExtra("muscleGroup2", workout.getMuscleGroup2());
+                intent.putExtra("inventory", workout.getInventory());
+                intent.putExtra("technique", workout.getTechnique());
+                intent.putExtra("image", workout.getImage());
+                intent.putExtra("url", workout.getUrl());
 
                 activity.startActivity(intent);
             }

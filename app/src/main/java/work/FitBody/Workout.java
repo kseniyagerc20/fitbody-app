@@ -1,11 +1,11 @@
 package work.FitBody;
 
 //Класс для записи и вывода данных
-class Movie {
+class Workout {
     private String name, description, muscleGroup1, muscleGroup2, image, url, technique, inventory;
     private int numberOfViews;
 
-    Movie(String name, String description, String muscleGroup1, String muscleGroup2, int numberOfViews, String image, String url, String technique, String inventory) {
+    Workout(String name, String description, String muscleGroup1, String muscleGroup2, int numberOfViews, String image, String url, String technique, String inventory) {
         super();
         this.name = name;
         this.description = description;
