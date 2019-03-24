@@ -16,7 +16,7 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
 import com.squareup.picasso.Picasso;
-
+//Класс для макета с полной информацией об упражнении, создание новых объектов для видеозаписи
 public class FullInfoActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
     public String urlPath; //Переменая для ссылки

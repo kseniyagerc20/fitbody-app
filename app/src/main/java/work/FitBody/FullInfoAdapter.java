@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-//Класс для упрощения связывания данных с элементов управдения
+//Класс для упрощения связывания данных с элементов управдения, с нужными методами
 class FullInfoAdapter extends BaseAdapter {
     private Activity activity;
     private ArrayList<Workout> workoutArrayList;

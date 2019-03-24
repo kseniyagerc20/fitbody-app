@@ -16,9 +16,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Название"
         android:textAlignment="center"
         android:textColor="@color/ic_launcher_background"
@@ -117,6 +116,7 @@
         android:layout_marginStart="8dp"
         android:text="ОПИСАНИЕ:"
         android:textColor="@color/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberOfViewTextView" />

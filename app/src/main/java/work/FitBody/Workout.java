@@ -1,6 +1,7 @@
 package work.FitBody;
 
 //Класс для записи и вывода данных
+//Для дальнейшего использования; создание специальных методов.
 class Workout {
     private String name, description, muscleGroup1, muscleGroup2, image, url, technique, inventory;
     private int numberOfViews;

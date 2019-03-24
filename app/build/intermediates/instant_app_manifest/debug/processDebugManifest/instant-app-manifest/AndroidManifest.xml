@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+xmins:android – определяет пространство имен Android;
+package – определяет уникальное имя пакета приложения, которое вы задали при создании проекта.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="work.FitBody"
     android:targetSandboxVersion="2"
@@ -9,7 +13,7 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
-    <!-- Подключение интернт -->
+    <!-- Подключение Интернет для эмулятора -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application

@@ -12,7 +12,7 @@ import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+//Основной класс с данными об упражнениях
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Workout> workoutArrayList;

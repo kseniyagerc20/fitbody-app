@@ -1,5 +1,5 @@
 package work.FitBody;
-
+//Класс с методами для выдачи ключа из google аккаунта
 public class YouTubeConfiguration {
     public YouTubeConfiguration() {
 
