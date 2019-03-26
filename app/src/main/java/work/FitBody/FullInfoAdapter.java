@@ -46,7 +46,7 @@ class FullInfoAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.movie_list_item, null);
+            convertView = inflater.inflate(R.layout.muscle_list_item, null);
 
         TextView name = (TextView) convertView.findViewById(R.id.nameTextView);
         TextView description = (TextView) convertView.findViewById(R.id.descriptionTextView);

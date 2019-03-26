@@ -854,7 +854,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout movie_list_item
+layout muscle_list_item
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -870,11 +870,11 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout review_muscle
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-layout watch_movie
 menu my_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground

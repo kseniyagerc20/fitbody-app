@@ -10,7 +10,6 @@
     android:paddingBottom="50dp">
 
     //Данные с блока
-
     <TextView
         android:id="@+id/nameTextView"
         android:layout_width="0dp"
